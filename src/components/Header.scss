@@ -1,0 +1,39 @@
+.header {
+
+    display: flex;
+    max-width: 1440px;
+    justify-content: space-between;
+    height: 91px;
+    margin: auto;
+    background-color: black;
+    color: white;
+    align-items: center;
+
+
+
+
+    img {
+        width: 168px;
+        height: 61px;
+        padding-left: 30px;
+    }
+
+    nav {
+
+        padding-right: 90px;
+        gap: 50px;
+
+        ul {
+            display: flex;
+            gap: 150px;
+            list-style-type: none;
+
+            li{
+                font-size: 24px;
+                cursor: pointer;
+            }
+        }
+    }
+    
+    
+}
