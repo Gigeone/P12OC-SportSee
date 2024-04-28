@@ -18,7 +18,19 @@ const MainPage = () => {
     fetchData();
   }, [userId]);
 
-  return <div> {userData?.data?.userInfos?.firstName}</div>;
+  return (
+    <div className="flex-row space-y-[41px] pt-[68px]">
+      <h1 className="text-5xl font-medium text-black">
+        Bonjour{" "}
+        <span className="text-red-500">
+          {userData?.data?.userInfos?.firstName}
+        </span>
+      </h1>
+      <h2 className="pb-[77px] text-[18px] font-normal">
+        Félicitations ! Vous avez explosé vos objectifs hier
+      </h2>
+    </div>
+  );
 };
 
 export default MainPage;

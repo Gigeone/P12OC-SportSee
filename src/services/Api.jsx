@@ -24,6 +24,30 @@ const userService = {
     }
   },
 
+  getUserPerformance: async (userId) => {
+    try {
+      const response = await axios.get(
+        `${BASE_URL}/user/${userId}/performance`
+      );
+      return response.data;
+    } catch (error) {
+      console.error("Error fetching user activity:", error);
+      throw error;
+    }
+  },
+
+  getUserAverageSessions: async (userId) => {
+    try {
+      const response = await axios.get(
+        `${BASE_URL}/user/${userId}/average-sessions`
+      );
+      return response.data;
+    } catch (error) {
+      console.error("Error fetching user activity:", error);
+      throw error;
+    }
+  },
+
   // Ajoutez d'autres fonctions de service pour les endpoints supplémentaires
 };
 
