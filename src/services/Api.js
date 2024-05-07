@@ -17,6 +17,7 @@ const userService = {
   getUserActivity: async (userId) => {
     try {
       const response = await axios.get(`${BASE_URL}/user/${userId}/activity`);
+      console.log("response.data", response.data);
       return response.data;
     } catch (error) {
       console.error("Error fetching user activity:", error);
