@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "http://localhost:3000"; // Mettez votre URL de backend ici
+const BASE_URL = "http://localhost:3000"; // URL de backend
 
 const userService = {
   getUserData: async (userId) => {

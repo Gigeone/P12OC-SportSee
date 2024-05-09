@@ -2,7 +2,7 @@ import userService from "../../services/Api";
 import React, { useState, useEffect } from "react";
 // import { UserContext } from "@/app/providers/UseContext";
 import { Bar, BarChart, CartesianGrid, Tooltip, XAxis, YAxis } from "recharts";
-import { formatActivityData } from "../../services/FormatData";
+import { formatActivityData } from "../../services/ModelFormatData";
 
 export default function DailyActivity() {
   const { userId } = 12;

@@ -2,22 +2,24 @@ import { useEffect, useState } from "react";
 import React from "react";
 import userService from "../services/Api.js";
 import DailyActivity from "./DataComponents/DailyActivity.jsx";
+import { useParams } from "react-router-dom";
 
-const MainPage = () => {
-  const { userId } = 12;
+const Content = () => {
+  const { id } = useParams();
+  console.log("userId", id);
   const [userData, setUserData] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const fetchedData = await userService.getUserData(12);
+        const fetchedData = await userService.getUserData(id);
         setUserData(fetchedData);
       } catch (error) {
         console.log(error);
       }
     };
     fetchData();
-  }, [userId]);
+  }, [id]);
 
   return (
     <div>
@@ -39,4 +41,4 @@ const MainPage = () => {
   );
 };
 
-export default MainPage;
+export default Content;

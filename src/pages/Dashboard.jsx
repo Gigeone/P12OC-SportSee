@@ -1,7 +1,7 @@
 import "./Dashboard.scss";
 import Header from "../components/Header";
 import SideBar from "../components/SideBar";
-import MainPage from "../components/Content";
+import Content from "../components/Content";
 
 const Dashboard = () => {
   return (
@@ -9,7 +9,7 @@ const Dashboard = () => {
       <Header />
       <div className="body">
         <SideBar />
-        <MainPage />
+        <Content />
       </div>
     </div>
   );
