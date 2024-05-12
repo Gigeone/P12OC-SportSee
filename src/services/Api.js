@@ -6,8 +6,10 @@ const userService = {
   getUserData: async (userId) => {
     try {
       const response = await axios.get(`${BASE_URL}/user/${userId}`);
-      console.log("response.data", response.data);
-      return response.data;
+      
+      const userActivityData = response.data
+      console.log(userActivityData)
+    return userActivityData.data
     } catch (error) {
       console.error("Error fetching user data:", error);
       throw error;
@@ -18,7 +20,9 @@ const userService = {
     try {
       const response = await axios.get(`${BASE_URL}/user/${userId}/activity`);
       console.log("response.data", response.data);
-      return response.data;
+      const userActivityData = response.data
+    console.log(userActivityData)
+    return userActivityData.data
     } catch (error) {
       console.error("Error fetching user activity:", error);
       throw error;
@@ -30,7 +34,8 @@ const userService = {
       const response = await axios.get(
         `${BASE_URL}/user/${userId}/performance`
       );
-      return response.data;
+      const userPerformanceData = response.data
+    return userPerformanceData.data
     } catch (error) {
       console.error("Error fetching user activity:", error);
       throw error;
@@ -42,7 +47,8 @@ const userService = {
       const response = await axios.get(
         `${BASE_URL}/user/${userId}/average-sessions`
       );
-      return response.data;
+      const userSessionData = response.data
+      return userSessionData.data
     } catch (error) {
       console.error("Error fetching user activity:", error);
       throw error;

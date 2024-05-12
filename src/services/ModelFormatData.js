@@ -11,6 +11,7 @@
 // }
 
 export class UserMainModel {
+  // console.log("here");
   constructor(data) {
     this.id = data.id
     this.firstName = data.userInfos.firstName
