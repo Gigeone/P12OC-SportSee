@@ -1,6 +1,6 @@
 import { LineChart, Line, XAxis, Tooltip, ResponsiveContainer } from "recharts";
 // import PropTypes from "prop-types"
-// import "../../scss/index.scss"
+import "./DataLineChart.scss";
 
 export default function DataLineChart({ lineValue }) {
   const data = lineValue;

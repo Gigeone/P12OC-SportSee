@@ -1,5 +1,5 @@
 import Icon from "../Icon";
-// import "../../scss/index.scss"
+import "./DataCard.scss";
 // import PropTypes from "prop-types"
 
 export default function DataCard({ dataValue, dataTitle, iconValue, unit }) {

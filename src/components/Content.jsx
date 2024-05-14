@@ -17,6 +17,7 @@ import caloriesIcon from "../assets/calories-icon.png";
 import carbsIcon from "../assets/carbs-icon.png";
 import fatIcon from "../assets/fat-icon.png";
 import proteinIcon from "../assets/protein-icon.png";
+import "./Content.scss";
 
 const Content = () => {
   const { id } = useParams();

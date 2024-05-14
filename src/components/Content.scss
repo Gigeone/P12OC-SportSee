@@ -1,0 +1,30 @@
+.dashboard {
+    width: 100%;
+    display: flex;
+    &__profil {
+      width: 100%;
+      margin: 2% 3% 0 3%;
+    }
+    &__graphics {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+    &__recharts {
+      width: 100%;
+      margin-right: 3%;
+      display: flex;
+      flex-direction: column;
+      &__blocs {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+  
+  .user h1 {
+    margin: 0;
+    span {
+      color: #ff0000;
+    }
+  }

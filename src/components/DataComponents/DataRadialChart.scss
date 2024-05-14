@@ -1,0 +1,34 @@
+.radialchart {
+    width: 100%;
+    position: relative;
+    background-color: #fbfbfb;
+    border-radius: 5px;
+    padding: 20px;
+    h3 {
+    margin-top: 0px;
+    }
+    }
+    
+    .radialchart-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    span {
+    font-size: 26px;
+    font-weight: bold;
+    }
+    &__text {
+    color: #74798c;
+    }
+    }
+    
+    .recharts-radial-bar-background-sector {
+    fill: white;
+    color: blue;
+    }

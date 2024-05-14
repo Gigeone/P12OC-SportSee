@@ -1,0 +1,16 @@
+.radarchart {
+    width: 100%;
+    background-color: #000000;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 0 2%;
+  }
+  
+  .recharts-polygon {
+    stroke: none;
+  }
+  
+  .recharts-polar-angle-axis-tick {
+    font-size: 12px;
+    font-weight: bold;
+  }

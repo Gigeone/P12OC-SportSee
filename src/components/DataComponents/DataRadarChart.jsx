@@ -7,7 +7,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 //   import PropTypes from "prop-types"
-//   import "../../scss/index.scss"
+import "./DataRadarChart.scss";
 
 export default function DataRadarChart({ radarDataValue }) {
   const data = radarDataValue;

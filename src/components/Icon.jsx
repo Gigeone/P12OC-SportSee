@@ -1,4 +1,4 @@
-// import "../../scss/index.scss";
+import "./Icon.scss"; //
 // import PropTypes from "prop-types"
 
 export default function Icon({ iconValue }) {

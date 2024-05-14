@@ -8,21 +8,22 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
+import "./DailyActivity.scss";
 
 export default function DailyActivity({ barValue }) {
   const data = barValue;
   console.log(data);
 
-  // function CustomTooltip({ active, payload }) {
-  //   if (active) {
-  //     return (
-  //       <div className="tooltip">
-  //         <p>{payload[0].value} kg</p>
-  //         <p>{payload[1].value} kCal</p>
-  //       </div>
-  //     );
-  //   }
-  // }
+  function CustomTooltip({ active, payload }) {
+    if (active) {
+      return (
+        <div className="tooltip">
+          <p>{payload[0].value} kg</p>
+          <p>{payload[1].value} kCal</p>
+        </div>
+      );
+    }
+  }
 
   return (
     <section className="barchart">
@@ -67,7 +68,7 @@ export default function DailyActivity({ barValue }) {
       </div>
       <ResponsiveContainer width="100%" height={200}>
         <BarChart data={data}>
-          {/* <Tooltip content={CustomTooltip} /> */}
+          <Tooltip content={CustomTooltip} />
           <CartesianGrid vertical="" stroke="#ccc" strokeDasharray="2 2" />
           <XAxis stroke="#9B9EAC" dataKey="day" />
           <YAxis

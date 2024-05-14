@@ -5,7 +5,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 //   import PropTypes from "prop-types"
-//   import "../../scss/index.scss"
+import "./DataRadialChart.scss";
 
 export default function DataRadialChart({ radialDataValue }) {
   let options = {
