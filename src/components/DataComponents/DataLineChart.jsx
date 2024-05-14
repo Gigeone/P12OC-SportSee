@@ -1,5 +1,4 @@
 import { LineChart, Line, XAxis, Tooltip, ResponsiveContainer } from "recharts";
-// import PropTypes from "prop-types"
 import "./DataLineChart.scss";
 
 export default function DataLineChart({ lineValue }) {
@@ -47,10 +46,3 @@ export default function DataLineChart({ lineValue }) {
     </section>
   );
 }
-
-// DataLineChart.propTypes = {
-//   data: PropTypes.shape({
-//     sessionLength: PropTypes.string,
-//     day: PropTypes.number.isRequired,
-//   }),
-// }

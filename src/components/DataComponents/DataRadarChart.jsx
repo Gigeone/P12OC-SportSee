@@ -6,7 +6,6 @@ import {
   PolarRadiusAxis,
   ResponsiveContainer,
 } from "recharts";
-//   import PropTypes from "prop-types"
 import "./DataRadarChart.scss";
 
 export default function DataRadarChart({ radarDataValue }) {
@@ -14,10 +13,13 @@ export default function DataRadarChart({ radarDataValue }) {
 
   return (
     <section className="radarchart">
-      <ResponsiveContainer width="100%" minWidth={185} height={200}>
+      <ResponsiveContainer width="100%" minWidth={185} height={220}>
         <RadarChart outerRadius="60%" data={data}>
           <PolarGrid gridType="polygon" radialLines={false} />
-          <PolarAngleAxis dataKey="kind" />
+          <PolarAngleAxis
+            dataKey="kind"
+            tick={{ fill: "white", fontSize: 15 }}
+          />
           <PolarRadiusAxis tick={false} axisLine={false} />
           <Radar
             name="kind"
@@ -31,11 +33,3 @@ export default function DataRadarChart({ radarDataValue }) {
     </section>
   );
 }
-
-//   DataRadarChart.propTypes = {
-//     data: PropTypes.shape({
-//       value: PropTypes.number.isRequired,
-//       kind: PropTypes.number.isRequired,
-//       label: PropTypes.string.isRequired,
-//     }),
-//   }

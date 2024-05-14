@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import React from "react";
-import userService from "../services/Api.js";
 import DailyActivity from "./DataComponents/DailyActivity.jsx";
 import DataRadarChart from "./DataComponents/DataRadarChart.jsx";
 import DataRadialChart from "./DataComponents/DataRadialChart.jsx";
@@ -51,16 +50,12 @@ const Content = () => {
       ) : (
         <main className="dashboard">
           <div className="dashboard__profil">
-            <div className="flex-row space-y-[41px] pt-[68px]">
-              <h1 className="text-5xl font-medium text-black">
+            <div className="user">
+              <h1 className="title-content">
                 Bonjour{" "}
-                <span className="text-red-500">
-                  {datas.userDatas.firstName}
-                </span>
+                <span className="first-name">{datas.userDatas.firstName}</span>
               </h1>
-              <h2 className="pb-[77px] text-[18px] font-normal">
-                Félicitations ! Vous avez explosé vos objectifs hier
-              </h2>
+              <h2>Félicitations ! Vous avez explosé vos objectifs hier 👏</h2>
             </div>
 
             <div className="dashboard__graphics">
