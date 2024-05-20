@@ -1,17 +1,5 @@
-// Fonction pour formater les données utilisateur de manière standard
-// export function formatUserData(userData) {
-//   return userData.map((user) => ({
-//     id: user.id,
-//     firstName: user.userInfos.firstName,
-//     lastName: user.userInfos.lastName,
-//     age: user.userInfos.age,
-//     score: user.score || user.todayScore,
-//     keyData: user.keyData,
-//   }));
-// }
 
 export class UserMainModel {
-  // console.log("here");
   constructor(data) {
     this.id = data.id
     this.firstName = data.userInfos.firstName

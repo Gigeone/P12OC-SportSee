@@ -1,12 +1,12 @@
 import axios from "axios";
 
-const BASE_URL = "http://localhost:3000"; // URL de backend
+const Axios = axios.create({baseURL: "http://localhost:3000"});
 
-const userService = {
+const ApiUserService = {
   getUserData: async (userId) => {
+    console.log("apied");
     try {
-      const response = await axios.get(`${BASE_URL}/user/${userId}`);
-      
+      const response = await Axios.get(`/user/${userId}`);
       const userActivityData = response.data
       console.log(userActivityData)
     return userActivityData.data
@@ -17,8 +17,9 @@ const userService = {
   },
 
   getUserActivity: async (userId) => {
+    console.log("apied");
     try {
-      const response = await axios.get(`${BASE_URL}/user/${userId}/activity`);
+      const response = await Axios.get(`/user/${userId}/activity`);
       console.log("response.data", response.data);
       const userActivityData = response.data
     console.log(userActivityData)
@@ -31,8 +32,8 @@ const userService = {
 
   getUserPerformance: async (userId) => {
     try {
-      const response = await axios.get(
-        `${BASE_URL}/user/${userId}/performance`
+      const response = await Axios.get(
+        `/user/${userId}/performance`
       );
       const userPerformanceData = response.data
     return userPerformanceData.data
@@ -44,8 +45,8 @@ const userService = {
 
   getUserAverageSessions: async (userId) => {
     try {
-      const response = await axios.get(
-        `${BASE_URL}/user/${userId}/average-sessions`
+      const response = await Axios.get(
+        `/user/${userId}/average-sessions`
       );
       const userSessionData = response.data
       return userSessionData.data
@@ -54,8 +55,7 @@ const userService = {
       throw error;
     }
   },
-
   // Ajoutez d'autres fonctions de service pour les endpoints supplémentaires
 };
 
-export default userService;
+export default ApiUserService;

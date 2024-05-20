@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import React from "react";
 import DailyActivity from "./DataComponents/DailyActivity.jsx";
 import DataRadarChart from "./DataComponents/DataRadarChart.jsx";
@@ -17,20 +17,23 @@ import carbsIcon from "../assets/carbs-icon.png";
 import fatIcon from "../assets/fat-icon.png";
 import proteinIcon from "../assets/protein-icon.png";
 import "./Content.scss";
+import { SourceContext } from "../services/context.jsx";
 
 const Content = () => {
   const { id } = useParams();
   console.log("userId", id);
   const [datas, setDatas] = useState({});
   const [isLoading, setIsLoading] = useState(true);
+  const { source } = useContext(SourceContext);
+  console.log("source", source);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const userDatas = await userMainData(id);
-        const userActivities = await userActivityData(id);
-        const userSessions = await userSessionData(id);
-        const userPerformances = await userPerformanceData(id);
+        const userDatas = await userMainData(id, source);
+        const userActivities = await userActivityData(id, source);
+        const userSessions = await userSessionData(id, source);
+        const userPerformances = await userPerformanceData(id, source);
 
         setDatas({ userDatas, userActivities, userSessions, userPerformances });
         console.log("datas", datas);

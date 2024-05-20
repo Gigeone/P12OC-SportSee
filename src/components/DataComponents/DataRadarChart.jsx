@@ -10,6 +10,18 @@ import "./DataRadarChart.scss";
 
 export default function DataRadarChart({ radarDataValue }) {
   const data = radarDataValue;
+  // function renderPolarAngleAxis({ payload, x, y, cx, cy, ...rest }) {
+  //   return (
+  //     <Text
+  //       {...rest}
+  //       verticalAnchor="middle"
+  //       y={y + (y - cy) / 2}
+  //       x={x + (x - cx) / 2}
+  //     >
+  //       {payload.value}
+  //     </Text>
+  //   );
+  // }
 
   return (
     <section className="radarchart">
