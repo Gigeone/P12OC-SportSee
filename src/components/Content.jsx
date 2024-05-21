@@ -21,11 +21,10 @@ import { SourceContext } from "../services/context.jsx";
 
 const Content = () => {
   const { id } = useParams();
-  console.log("userId", id);
   const [datas, setDatas] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const { source } = useContext(SourceContext);
-  console.log("source", source);
+  const [isError, setError] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -40,16 +39,25 @@ const Content = () => {
         setIsLoading(false);
       } catch (error) {
         console.log(error);
+        setError(true);
       }
     };
     fetchData();
     console.log("datas", datas);
   }, [id]);
 
+  if (isError) {
+    return (
+      <h2 className="error-content">
+        Oops, nous pouvons pas joindre le serveur. Essayez plus tard.
+      </h2>
+    );
+  }
+
   return (
     <>
       {isLoading ? (
-        "Loading..."
+        <h2 className="error-content">Chargement ...</h2>
       ) : (
         <main className="dashboard">
           <div className="dashboard__profil">
