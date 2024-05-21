@@ -7,8 +7,18 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import "./DataRadarChart.scss";
+import PropTypes from "prop-types";
 
-export default function DataRadarChart({ radarDataValue }) {
+/**
+ * Renders a radar chart component with the provided radar data value.
+ *
+ * @param {Object} props - The props object containing the radar data value.
+ * @param {Object[]} props.radarDataValue - The data for the radar chart.
+ * @param {string} props.radarDataValue[].kind - The kind of data.
+ * @param {number} props.radarDataValue[].value - The value of the data.
+ * @return {JSX.Element} The radar chart component.
+ */
+const DataRadarChart = ({ radarDataValue }) => {
   const data = radarDataValue;
   // function renderPolarAngleAxis({ payload, x, y, cx, cy, ...rest }) {
   //   return (
@@ -44,4 +54,14 @@ export default function DataRadarChart({ radarDataValue }) {
       </ResponsiveContainer>
     </section>
   );
-}
+};
+
+export default DataRadarChart;
+
+DataRadarChart.propTypes = {
+  data: PropTypes.shape({
+    value: PropTypes.number.isRequired,
+    kind: PropTypes.number.isRequired,
+    label: PropTypes.string.isRequired,
+  }),
+};

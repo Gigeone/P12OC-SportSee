@@ -19,6 +19,11 @@ import proteinIcon from "../assets/protein-icon.png";
 import "./Content.scss";
 import { SourceContext } from "../services/context.jsx";
 
+/**
+ * Renders the content of the dashboard page.
+ *
+ * @return {JSX.Element} The JSX element representing the content of the dashboard page.
+ */
 const Content = () => {
   const { id } = useParams();
   const [datas, setDatas] = useState({});
@@ -27,6 +32,11 @@ const Content = () => {
   const [isError, setError] = useState(false);
 
   useEffect(() => {
+    /**
+     * Fetches user data from the server and updates the state with the fetched data.
+     *
+     * @return {Promise<void>} A promise that resolves when the data is fetched and the state is updated.
+     */
     const fetchData = async () => {
       try {
         const userDatas = await userMainData(id, source);

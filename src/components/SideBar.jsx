@@ -1,6 +1,11 @@
 import React from "react";
 import "./SideBar.scss";
 
+/**
+ * Renders a sidebar component with icons and a copyright notice.
+ *
+ * @return {JSX.Element} The rendered sidebar component.
+ */
 const SideBar = () => {
   return (
     <div className="sidebar">

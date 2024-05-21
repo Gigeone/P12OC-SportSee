@@ -9,12 +9,20 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import "./DailyActivity.scss";
+import PropTypes from "prop-types";
 
-export default function DailyActivity({ barValue }) {
+/**
+ * Renders a daily activity bar chart component.
+ *
+ * @param {Object} props - The component props.
+ * @param {Array} props.barValue - The data for the bar chart.
+ * @return {JSX.Element} The rendered daily activity bar chart component.
+ */
+const DailyActivity = ({ barValue }) => {
   const data = barValue;
   console.log(data);
 
-  function CustomTooltip({ active, payload }) {
+  const CustomTooltip = ({ active, payload }) => {
     if (active) {
       return (
         <div className="tooltip">
@@ -23,7 +31,7 @@ export default function DailyActivity({ barValue }) {
         </div>
       );
     }
-  }
+  };
 
   return (
     <section className="barchart">
@@ -93,4 +101,13 @@ export default function DailyActivity({ barValue }) {
       </ResponsiveContainer>
     </section>
   );
-}
+};
+
+export default DailyActivity;
+
+DailyActivity.propTypes = {
+  data: PropTypes.shape({
+    kilogram: PropTypes.number.isRequired,
+    calories: PropTypes.number.isRequired,
+  }),
+};

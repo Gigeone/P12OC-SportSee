@@ -9,7 +9,15 @@ const source = {
 
 export const SourceContext = createContext();
 
-function SourceProvider({ children }) {
+/**
+ * A React component that provides a context for the current source of data.
+ * It manages the current source and allows toggling between the API source and the mock source.
+ *
+ * @param {Object} props - The properties object.
+ * @param {React.ReactNode} props.children - The child components to be rendered.
+ * @return {JSX.Element} The SourceProvider component.
+ */
+const SourceProvider = ({ children }) => {
   const [currentSource, setCurrentSource] = useState(source.api);
   console.log("currentSource", currentSource);
 
@@ -28,6 +36,6 @@ function SourceProvider({ children }) {
       {children}
     </SourceContext.Provider>
   );
-}
+};
 
 export default SourceProvider;

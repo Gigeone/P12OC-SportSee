@@ -5,6 +5,11 @@ import Woman from "../assets/woman.jpg";
 import { SourceContext } from "../services/context";
 import "./Home.scss";
 
+/**
+ * Renders the Home component.
+ *
+ * @return {JSX.Element} The rendered Home component.
+ */
 const Home = () => {
   const { source, toggleSource, isApiSource } = useContext(SourceContext);
   console.log(source, toggleSource, isApiSource);

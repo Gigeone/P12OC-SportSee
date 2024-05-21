@@ -1,10 +1,18 @@
 import { LineChart, Line, XAxis, Tooltip, ResponsiveContainer } from "recharts";
 import "./DataLineChart.scss";
+import PropTypes from "prop-types";
 
-export default function DataLineChart({ lineValue }) {
+/**
+ * Renders a line chart component with custom tooltip.
+ *
+ * @param {Object} props - The component props.
+ * @param {Array} props.lineValue - The data for the line chart.
+ * @return {JSX.Element} The line chart component.
+ */
+const DataLineChart = ({ lineValue }) => {
   const data = lineValue;
 
-  function CustomTooltip({ active, payload }) {
+  const CustomTooltip = ({ active, payload }) => {
     if (active) {
       return (
         <div className="tooltip">
@@ -12,7 +20,7 @@ export default function DataLineChart({ lineValue }) {
         </div>
       );
     }
-  }
+  };
 
   return (
     <section className="linechart">
@@ -45,4 +53,13 @@ export default function DataLineChart({ lineValue }) {
       </ResponsiveContainer>
     </section>
   );
-}
+};
+
+export default DataLineChart;
+
+DataLineChart.propTypes = {
+  data: PropTypes.shape({
+    sessionLength: PropTypes.string,
+    day: PropTypes.number.isRequired,
+  }),
+};

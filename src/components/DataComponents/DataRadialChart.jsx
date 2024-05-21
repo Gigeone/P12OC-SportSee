@@ -4,10 +4,18 @@ import {
   RadialBar,
   ResponsiveContainer,
 } from "recharts";
-//   import PropTypes from "prop-types"
+
+import PropTypes from "prop-types";
 import "./DataRadialChart.scss";
 
-export default function DataRadialChart({ radialDataValue }) {
+/**
+ * Renders a radial chart component displaying the provided radial data value.
+ *
+ * @param {Object} props - The props object containing the radial data value.
+ * @param {number} props.radialDataValue - The value to be displayed in the radial chart.
+ * @return {JSX.Element} The JSX element representing the radial chart component.
+ */
+const DataRadialChart = ({ radialDataValue }) => {
   let options = {
     style: "percent",
     minimumFractionDigits: 0,
@@ -50,8 +58,10 @@ export default function DataRadialChart({ radialDataValue }) {
       </ResponsiveContainer>
     </section>
   );
-}
+};
 
-//   DataRadialChart.propTypes = {
-//     todayScore: PropTypes.number,
-//   }
+export default DataRadialChart;
+
+DataRadialChart.propTypes = {
+  radialDataValue: PropTypes.number,
+};
