@@ -35,20 +35,20 @@ const DataRadarChart = ({ radarDataValue }) => {
 
   return (
     <section className="radarchart">
-      <ResponsiveContainer width="100%" minWidth={185} height={220}>
-        <RadarChart outerRadius="60%" data={data}>
+      <ResponsiveContainer width="100%" height="100%">
+        <RadarChart innerRadius="0" outerRadius="69%" data={data}>
           <PolarGrid gridType="polygon" radialLines={false} />
           <PolarAngleAxis
             dataKey="kind"
-            tick={{ fill: "white", fontSize: 15 }}
+            tick={{ fill: "white", fontSize: 12 }}
           />
           <PolarRadiusAxis tick={false} axisLine={false} />
           <Radar
             name="kind"
             dataKey="value"
-            stroke="#FFFFFF"
+            stroke="#FF0101B2"
             fill="rgba(230, 0, 0, 0.7)"
-            fillOpacity={0.6}
+            fillOpacity={1}
           />
         </RadarChart>
       </ResponsiveContainer>

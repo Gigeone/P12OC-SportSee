@@ -35,7 +35,7 @@ const DataRadialChart = ({ radialDataValue }) => {
       <ResponsiveContainer width="100%" minWidth={185} height={200}>
         <RadialBarChart
           innerRadius="100%"
-          outerRadius={200}
+          outerRadius={100}
           barSize={10}
           data={data}
         >

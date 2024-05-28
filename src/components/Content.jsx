@@ -69,59 +69,55 @@ const Content = () => {
       {isLoading ? (
         <h2 className="error-content">Chargement ...</h2>
       ) : (
-        <main className="dashboard">
-          <div className="dashboard__profil">
-            <div className="user">
-              <h1 className="title-content">
-                Bonjour{" "}
-                <span className="first-name">{datas.userDatas.firstName}</span>
-              </h1>
-              <h2>Félicitations ! Vous avez explosé vos objectifs hier 👏</h2>
-            </div>
-
-            <div className="dashboard__graphics">
-              <div className="dashboard__recharts">
-                <DailyActivity barValue={datas.userActivities.sessions} />
-                <div className="dashboard__recharts__blocs">
-                  <DataLineChart lineValue={datas.userSessions.sessions} />
-                  <DataRadarChart
-                    radarValue={datas.userPerformances.kind}
-                    radarDataValue={datas.userPerformances.data}
-                  />
-                  <DataRadialChart
-                    radialDataValue={datas.userDatas.todayScore}
-                  />
-                </div>
-              </div>
-              <section className="section-userdata">
-                <DataCard
-                  iconValue={caloriesIcon}
-                  dataValue={datas.userDatas.keyData.calorieCount}
-                  dataTitle={"Calories"}
-                  unit={"kCal"}
-                />
-                <DataCard
-                  iconValue={proteinIcon}
-                  dataValue={datas.userDatas.keyData.proteinCount}
-                  dataTitle={"Proteines"}
-                  unit={"g"}
-                />
-                <DataCard
-                  iconValue={carbsIcon}
-                  dataValue={datas.userDatas.keyData.carbohydrateCount}
-                  dataTitle={"Glucides"}
-                  unit={"g"}
-                />
-                <DataCard
-                  iconValue={fatIcon}
-                  dataValue={datas.userDatas.keyData.lipidCount}
-                  dataTitle={"Lipides"}
-                  unit={"g"}
-                />
-              </section>
-            </div>
+        <div className="dashboard__profil">
+          <div className="user">
+            <h1 className="title-content">
+              Bonjour{" "}
+              <span className="first-name">{datas.userDatas.firstName}</span>
+            </h1>
+            <h2>Félicitations ! Vous avez explosé vos objectifs hier 👏</h2>
           </div>
-        </main>
+
+          <div className="dashboard__graphics">
+            <div className="dashboard__recharts">
+              <DailyActivity barValue={datas.userActivities.sessions} />
+              <div className="dashboard__recharts__blocs">
+                <DataLineChart lineValue={datas.userSessions.sessions} />
+                <DataRadarChart
+                  radarValue={datas.userPerformances.kind}
+                  radarDataValue={datas.userPerformances.data}
+                />
+                <DataRadialChart radialDataValue={datas.userDatas.todayScore} />
+              </div>
+            </div>
+            <section className="section-userdata">
+              <DataCard
+                iconValue={caloriesIcon}
+                dataValue={datas.userDatas.keyData.calorieCount}
+                dataTitle={"Calories"}
+                unit={"kCal"}
+              />
+              <DataCard
+                iconValue={proteinIcon}
+                dataValue={datas.userDatas.keyData.proteinCount}
+                dataTitle={"Proteines"}
+                unit={"g"}
+              />
+              <DataCard
+                iconValue={carbsIcon}
+                dataValue={datas.userDatas.keyData.carbohydrateCount}
+                dataTitle={"Glucides"}
+                unit={"g"}
+              />
+              <DataCard
+                iconValue={fatIcon}
+                dataValue={datas.userDatas.keyData.lipidCount}
+                dataTitle={"Lipides"}
+                unit={"g"}
+              />
+            </section>
+          </div>
+        </div>
       )}
     </>
   );

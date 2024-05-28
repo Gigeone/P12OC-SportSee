@@ -39,9 +39,9 @@ export class UserPerformanceModel {
       "Cardio",
       "Energie",
       "Endurance",
-      "Strength",
-      "Speed",
-      "Intensity",
+      "Force",
+      "Vitesse",
+      "Intensité",
     ]
     return formatPerform
   }

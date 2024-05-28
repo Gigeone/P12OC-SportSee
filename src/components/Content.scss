@@ -1,6 +1,5 @@
 .dashboard {
-    width: 100%;
-    display: flex;
+    
     &__profil {
       width: 100%;
       margin: 2% 3% 0 3%;
@@ -19,15 +18,26 @@
         display: flex;
         justify-content: space-between;
         height: 263px;
+        gap : 15px;
       }
     }
   }
+
+  .user {
+    margin-bottom: 30px;
+  }
   
   .user h1 {
-    margin: 0;
+    margin : 20px 0;
+    font-size: 3rem;
     span {
       color: #ff0000;
     }
+  }
+
+  .user h2 {
+    margin: 0;
+    font-size: 1.125rem;
   }
 
 
