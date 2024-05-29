@@ -81,9 +81,9 @@ const DailyActivity = ({ barValue }) => {
           <XAxis stroke="#9B9EAC" dataKey="day" />
           <YAxis
             stroke="#9B9EAC"
-            tickCount={3}
-            YAxisId="right"
-            orientation="right"
+            tickCount={3} // Nombre de ticks (graduations) sur l'axe Y
+            YAxisId="right" // ID de l'axe Y pour le positionner à droite
+            orientation="right" // Orientation de l'axe à droite
           />
           <Bar
             dataKey="kilogram"
@@ -92,10 +92,10 @@ const DailyActivity = ({ barValue }) => {
             radius={[5, 5, 0, 0]}
           />
           <Bar
-            dataKey="calories"
-            fill="#FF0101"
-            barSize={8}
-            radius={[5, 5, 0, 0]}
+            dataKey="calories" // Clé des données pour les valeurs de calories
+            fill="#FF0101" // Couleur de la barre
+            barSize={8} // Taille de la barre
+            radius={[5, 5, 0, 0]} // Rayons des coins (arrondi en haut)
           />
         </BarChart>
       </ResponsiveContainer>

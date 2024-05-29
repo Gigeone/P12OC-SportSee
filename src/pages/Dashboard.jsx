@@ -12,7 +12,7 @@ const Dashboard = () => {
   return (
     <div>
       <Header />
-      <div className="body">
+      <div className="main-content">
         <SideBar />
         <Content />
       </div>

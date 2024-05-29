@@ -44,11 +44,11 @@ const DataRadarChart = ({ radarDataValue }) => {
           />
           <PolarRadiusAxis tick={false} axisLine={false} />
           <Radar
-            name="kind"
-            dataKey="value"
-            stroke="#FF0101B2"
-            fill="rgba(230, 0, 0, 0.7)"
-            fillOpacity={1}
+            name="kind" // Nom de la série de données
+            dataKey="value" // Clé des données pour les valeurs
+            stroke="#FF0101B2" // Couleur du trait du radar
+            fill="rgba(230, 0, 0, 0.7)" // Couleur de remplissage du radar avec transparence
+            fillOpacity={1} // Opacité de remplissage (1 signifie opaque)
           />
         </RadarChart>
       </ResponsiveContainer>
