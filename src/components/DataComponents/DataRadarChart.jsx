@@ -20,18 +20,6 @@ import PropTypes from "prop-types";
  */
 const DataRadarChart = ({ radarDataValue }) => {
   const data = radarDataValue;
-  // function renderPolarAngleAxis({ payload, x, y, cx, cy, ...rest }) {
-  //   return (
-  //     <Text
-  //       {...rest}
-  //       verticalAnchor="middle"
-  //       y={y + (y - cy) / 2}
-  //       x={x + (x - cx) / 2}
-  //     >
-  //       {payload.value}
-  //     </Text>
-  //   );
-  // }
 
   return (
     <section className="radarchart">
@@ -59,6 +47,7 @@ const DataRadarChart = ({ radarDataValue }) => {
 export default DataRadarChart;
 
 DataRadarChart.propTypes = {
+  radarDataValue: PropTypes.array.isRequired,
   data: PropTypes.shape({
     value: PropTypes.number.isRequired,
     kind: PropTypes.number.isRequired,

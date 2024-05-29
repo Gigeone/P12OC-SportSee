@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import {
   BarChart,
   Bar,
@@ -106,6 +106,7 @@ const DailyActivity = ({ barValue }) => {
 export default DailyActivity;
 
 DailyActivity.propTypes = {
+  barValue: PropTypes.array.isRequired,
   data: PropTypes.shape({
     kilogram: PropTypes.number.isRequired,
     calories: PropTypes.number.isRequired,

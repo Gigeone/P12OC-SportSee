@@ -59,6 +59,7 @@ const DataLineChart = ({ lineValue }) => {
 export default DataLineChart;
 
 DataLineChart.propTypes = {
+  lineValue: PropTypes.array.isRequired,
   data: PropTypes.shape({
     sessionLength: PropTypes.string,
     day: PropTypes.number.isRequired,
